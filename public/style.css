@@ -1,14 +1,16 @@
 body {
-  background-color: #7f0920;
-  color: #0a0408;
+  background-color: #000000;
+  color: #db0000;
 }
 
 #appTitle {
   text-align: center;
   margin: 0px auto;
+  margin-bottom: 20px;
   display: block;
   font-family: "Staatliches", sans-serif;
-  font-size: 80px;
+  font-size: 45px;
+  text-shadow: 3px 3px 4px #ba050080;
 }
 
 #genreForm,
@@ -26,12 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-@media only screen and (min-width: 1024px) {
-  #movieInfo {
-    flex-direction: row;
-  }
+  gap: 30px;
 }
 
 #moviePoster {
@@ -57,32 +54,47 @@ img#moviePoster {
   line-height: 1.25;
 }
 
-#movieTitle,
-#movieOverview {
-  padding: 32px;
+#genres {
+  width: 250px;
+  font-size: 20px;
+  padding: 7px 10px;
+  border-style: none;
+  background-color: #ffffff;
+  color: #db0000;
+  font-family: "Fredoka One", sans-serif;
+  border-radius: 5px;
+}
+
+#genres:focus {
+  outline: none;
 }
 
 #playBtn {
-  margin-top: 20px;
-  font-size: 25px;
-  padding: 7px 10px;
-  border-radius: 10px;
+  margin-top: 25px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
   border-style: none;
-  background-color: #da2f47;
-  color: #ffd983;
+  background-color: #db0000;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.2s linear;
 }
 
 #playBtn:hover {
-  opacity: 0.85;
   transform: scale(0.9);
+}
+
+#playBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 label {
   display: block;
-  font-size: 35px;
-  margin-bottom: 5px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 select {
@@ -110,6 +122,6 @@ select {
 }
 
 #dislikeBtn {
-  background-color: #c74a4a;
+  background-color: #db0000;
   color: #910000;
 }

@@ -25,7 +25,6 @@ const getMovies = async () => {
   const selectedGenre = getSelectedGenre();
   const discoverMovieEndpoint = "/discover/movie";
   const page = Math.floor(Math.random() * MAX_PAGE + MIN_PAGE);
-  console.log(page);
   const requestParams =
     "?api_key=" + tmdbKey + "&with_genres=" + selectedGenre + "&page=" + page;
   const urlToFetch = tmdbBaseUrl + discoverMovieEndpoint + requestParams;
@@ -68,10 +67,14 @@ const showRandomMovie = async () => {
     clearCurrentMovie();
   }
 
+  playBtn.disabled = true;
+
   const movies = await getMovies();
   const randomMovie = getRandomMovie(movies);
   const info = await getMovieInfo(randomMovie);
   displayMovie(info);
+
+  playBtn.disabled = false;
 };
 
 getGenres().then(populateGenreDropdown);
