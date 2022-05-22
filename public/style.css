@@ -1,0 +1,115 @@
+body {
+  background-color: #7f0920;
+  color: #0a0408;
+}
+
+#appTitle {
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+  font-family: "Staatliches", sans-serif;
+  font-size: 80px;
+}
+
+#genreForm,
+#playBtn {
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+  font-family: "Fredoka One", sans-serif;
+}
+
+#movieInfo {
+  width: 65%;
+  margin: 32px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+  #movieInfo {
+    flex-direction: row;
+  }
+}
+
+#moviePoster {
+  flex: 1;
+}
+
+#movieText {
+  flex: 1.5;
+}
+
+img#moviePoster {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+#movieText {
+  font-family: "Questrial";
+  color: #fefbea;
+  line-height: 1.25;
+}
+
+#movieTitle,
+#movieOverview {
+  padding: 32px;
+}
+
+#playBtn {
+  margin-top: 20px;
+  font-size: 25px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #da2f47;
+  color: #ffd983;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+#playBtn:hover {
+  opacity: 0.85;
+  transform: scale(0.9);
+}
+
+label {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 200px;
+  height: auto;
+}
+
+#likeOrDislikeBtns {
+  text-align: center;
+  margin: 0px auto;
+}
+
+#likeBtn,
+#dislikeBtn {
+  padding: 15px 25px;
+  font-size: 25px;
+  border-radius: 12px;
+  border-style: none;
+  cursor: pointer;
+}
+
+#likeBtn {
+  background-color: #249e57;
+  color: darkgreen;
+}
+
+#dislikeBtn {
+  background-color: #c74a4a;
+  color: #910000;
+}
