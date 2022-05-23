@@ -22,6 +22,12 @@ const showBtns = () => {
   btnDiv.removeAttribute("hidden");
 };
 
+// Hide the like and dislike buttons on the page
+const hideBtns = () => {
+  const btnDiv = document.getElementById("likeOrDislikeBtns");
+  btnDiv.hidden = true;
+};
+
 // Clear the current movie from the screen
 const clearCurrentMovie = () => {
   const moviePosterDiv = document.getElementById("moviePoster");
