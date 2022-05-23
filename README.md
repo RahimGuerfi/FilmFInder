@@ -17,18 +17,18 @@ Using `fetch`, `async`, and `await`, you’ll request data from the [TMDB](https
 
 - HTML
 - CSS
-- JavaScript
-- Git, GitHub and GitHub Pages
+- ExpressJS
 
 ## How to use
 
 1. Clone the repository and change directory.
-
 ```
 git clone https://github.com/RahimGuerfi/FilmFInder.git
 ```
+2. Change ```API_KEY``` to your [TMDB API Key](https://www.themoviedb.org/documentation/api)
 
-2. Open "FilmFInder/index.html" file.
+3. Run 
+```npm start```
 
 ## Challenges and Credits
 
