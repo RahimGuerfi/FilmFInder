@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 const tmdbBaseUrl = "https://api.themoviedb.org/3";
 
 //Get genres route
-app.get("/getGenres", async (req, res) => {
+app.get("/api/getGenres", async (req, res) => {
   const genreRequestEndpoint = "/genre/movie/list";
   const urlToFetch = tmdbBaseUrl + genreRequestEndpoint;
 
@@ -40,7 +40,7 @@ app.get("/getGenres", async (req, res) => {
 });
 
 //Get movies route
-app.post("/getMovies", async (req, res) => {
+app.post("/api/getMovies", async (req, res) => {
   const { genre, page } = req.body;
   const discoverMovieEndpoint = "/discover/movie";
   const requestParams = "?with_genres=" + genre + "&page=" + page;
@@ -63,7 +63,7 @@ app.post("/getMovies", async (req, res) => {
 
 //Get movieInfo route
 //Get genres route
-app.get("/getMovieInfo/:movieId", async (req, res) => {
+app.get("/api/getMovieInfo/:movieId", async (req, res) => {
   const { movieId } = req.params;
   const movieEndpoint = "/movie/" + movieId;
   const urlToFetch = tmdbBaseUrl + movieEndpoint;

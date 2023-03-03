@@ -4,7 +4,7 @@ const playBtn = document.getElementById("playBtn");
 const loader = document.getElementById("loader");
 
 const getGenres = async () => {
-  const response = await fetch("/getGenres");
+  const response = await fetch("/api/getGenres");
   const genres = await response.json();
   return genres;
 };
@@ -13,7 +13,7 @@ const getMovies = async () => {
   const selectedGenre = getSelectedGenre();
   const page = Math.floor(Math.random() * MAX_PAGE + MIN_PAGE);
 
-  const response = await fetch("/getMovies", {
+  const response = await fetch("/api/getMovies", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const getMovies = async () => {
 const getMovieInfo = async (movie) => {
   const movieId = movie.id;
 
-  const response = await fetch("/getMovieInfo/" + movieId);
+  const response = await fetch("/api/getMovieInfo/" + movieId);
   const movieInfo = await response.json();
   return movieInfo;
 };
