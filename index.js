@@ -11,6 +11,11 @@ app.listen(port, () => {
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
+//index.js
+app.get("/", (req, res) => {
+  res.sendFile("index.html", { root: path.join(__dirname, "public") });
+});
+
 //Api base url
 const tmdbBaseUrl = "https://api.themoviedb.org/3";
 
